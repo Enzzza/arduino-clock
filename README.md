@@ -4,6 +4,7 @@
 <br/>
  
 A few years ago I visited my grandma who at the time lived by herself in Vajxo, Sweden. Her vision was slowly deteriorating and she would always ask us to tell her what time it was. I know there is a lot of talking clocks out there but mostly they are in English. Seven days before my trip to Sweden I decided to create an Arduino clock that would produce audio notifications for each hour. For this, I recorded my mother’s ( i think this was hardest part :P ) voice along with a greeting message in Bosnian that would play every morning at 8am. Needless to say, grandma was thrilled and happy that she no longer had to rely on her family and visitors to tell her what time it was. This gave her some much needed independence.
+Funny story i needed to bring this to bus.
 
 This clock will say time every hour or if u use remote controller you will get time at that point
 
@@ -21,7 +22,7 @@ We will need following parts:
 
 <br>
 
-![img1](šema)
+![img01](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img01.PNG?token=AKSHPCZ5ZSV73CWGOHZUAT3AMJLC4)
 
 <br>
 
@@ -29,7 +30,7 @@ We will need following parts:
 
 <br>
 
-![img2](prototype)
+![img02](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img02.jpg?token=AKSHPC4N7BTSXH4Q34SPQ3LAMJLFQ)
 
 <br>
 
@@ -41,7 +42,7 @@ After we finished prototyping and testing everything we are ready to put it all 
 
 <br>
 
-![img3](assembly)
+![img03](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img03.jpg?token=AKSHPC26OEJI4SNWRLB7G5LAMJLH2)
 
 <br>
 
@@ -49,7 +50,7 @@ I called my good friend to help me with soldering he is really good with it i ca
 
 <br>
 
-![img4](friend)
+![img04](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img04.jpg?token=AKSHPC76GOYLSGG6JEUNWX3AMJLKC)
 
 <br>
 
@@ -57,11 +58,11 @@ We make our box fancy
 
 <br>
 
-![img5](fancy)
+![img05](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img05.jpg?token=AKSHPC2WDMY35XF2IKMAD5LAMJLL2)
 
 <br>
 
-![img6](inside)
+![img06](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img06.jpg?token=AKSHPCZU6Y4W7J5UEGE37FLAMJLNK)
 
 <br>
 
@@ -74,7 +75,7 @@ I used android application to record audio and edit it.
 <br>
 <br>
 
-![img7](lexis)
+![img07](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img07.jpg?token=AKSHPCYQG4XVSFFIS5PS35TAMJLP6)
 
 <br>
 
@@ -82,7 +83,7 @@ Record all audio for hours and minutes
 
 <br>
 
-![img8](files)
+![img08](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img08.jpg?token=AKSHPCZL23BODT7DK3ECFGLAMJLS4)
 
 <br>
 
@@ -94,7 +95,7 @@ Before everything its good to format SD card
 
 <br>
 
-![img9](format)
+![img09](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img09.jpg?token=AKSHPC4SORLACCNHE2LSWQ3AMJLUK)
 
 <br>
 
@@ -114,11 +115,11 @@ Run this script inside your folder with audio files make sure to put AD4CONVERTE
 
 <br>
 
-![img10](script)
+![img10](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img10.JPG?token=AKSHPC435BIDLPFL5FOJNYTAMJLV6)
 
 <br>
 
-![img11](converted)
+![img11](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img11.JPG?token=AKSHPC5K4OF2KQR24WJCTZDAMJLXM)
 
 <br>
 
