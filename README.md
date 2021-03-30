@@ -47,7 +47,7 @@ After we finished prototyping and testing everything we are ready to put it all 
 
 <br>
 
-I called my good friend to help me with soldering he is really good with it i can't risk to leave joints loose
+I called my good friend (Armin Mušić) to help me with soldering he is really good with it i can't risk to leave joints loose
 
 <br>
 
