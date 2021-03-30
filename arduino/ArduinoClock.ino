@@ -25,8 +25,8 @@ RTC_DS3231 rtc;
 int DST;
 
 /*-----( Declare objects )-----*/
-IRrecv irrecv(RECEIVER_PIN);     // create instance of 'irrecv'
-decode_results results;      // create instance of 'decode_results'
+IRrecv irrecv(RECEIVER_PIN);     // Create instance of 'irrecv'
+decode_results results;      // Create instance of 'decode_results'
 
 /*
   Create an instance of the Wtv020sd16p class.
@@ -71,91 +71,90 @@ void switchTime(DateTime &myTime, bool hourly) {
 
   }
 
+  // Play minutes audio
+  if (hourly != true) {
+    switch (Minute) {
+      case 0: wtv020sd16p.playVoice(24); delay(1000);    break;
+      case 1: wtv020sd16p.playVoice(25); delay(1000);    break;
+      case 2: wtv020sd16p.playVoice(26); delay(1000);    break;
+      case 3: wtv020sd16p.playVoice(27); delay(1000);    break;
+      case 4: wtv020sd16p.playVoice(28); delay(1000);    break;
+      case 5: wtv020sd16p.playVoice(29); delay(1000);    break;
+      case 6: wtv020sd16p.playVoice(30); delay(1000);    break;
+      case 7: wtv020sd16p.playVoice(31); delay(1000);    break;
+      case 8: wtv020sd16p.playVoice(32); delay(1000);    break;
+      case 9: wtv020sd16p.playVoice(33); delay(1000);    break;
+      case 10: wtv020sd16p.playVoice(34); delay(1000);  break;
+      case 11: wtv020sd16p.playVoice(35); delay(1000);  break;
+      case 12: wtv020sd16p.playVoice(36); delay(1000);  break;
+      case 13: wtv020sd16p.playVoice(37); delay(1000);  break;
+      case 14: wtv020sd16p.playVoice(38); delay(1000);  break;
+      case 15: wtv020sd16p.playVoice(39); delay(1000);  break;
+      case 16: wtv020sd16p.playVoice(40); delay(1000);  break;
+      case 17: wtv020sd16p.playVoice(41); delay(1000);  break;
+      case 18: wtv020sd16p.playVoice(42); delay(1000);  break;
+      case 19: wtv020sd16p.playVoice(43); delay(1000);  break;
+      case 20: wtv020sd16p.playVoice(44); delay(1000);  break;
+      case 21: wtv020sd16p.playVoice(45); delay(1000);  break;
+      case 22: wtv020sd16p.playVoice(46); delay(1000);  break;
+      case 23: wtv020sd16p.playVoice(47); delay(1000);  break;
+      case 24: wtv020sd16p.playVoice(48); delay(1000);    break;
+      case 25: wtv020sd16p.playVoice(49); delay(1000);    break;
+      case 26: wtv020sd16p.playVoice(50); delay(1000);    break;
+      case 27: wtv020sd16p.playVoice(51); delay(1000);    break;
+      case 28: wtv020sd16p.playVoice(52); delay(1000);    break;
+      case 29: wtv020sd16p.playVoice(53); delay(1000);    break;
+      case 30: wtv020sd16p.playVoice(54); delay(1000);    break;
+      case 31: wtv020sd16p.playVoice(55); delay(1000);    break;
+      case 32: wtv020sd16p.playVoice(56); delay(1000);    break;
+      case 33: wtv020sd16p.playVoice(57); delay(1000);    break;
+      case 34: wtv020sd16p.playVoice(58); delay(1000);  break;
+      case 35: wtv020sd16p.playVoice(59); delay(1000);  break;
+      case 36: wtv020sd16p.playVoice(60); delay(1000);  break;
+      case 37: wtv020sd16p.playVoice(61); delay(1000);  break;
+      case 38: wtv020sd16p.playVoice(62); delay(1000);  break;
+      case 39: wtv020sd16p.playVoice(63); delay(1000);  break;
+      case 40: wtv020sd16p.playVoice(64); delay(1000);  break;
+      case 41: wtv020sd16p.playVoice(65); delay(1000);  break;
+      case 42: wtv020sd16p.playVoice(66); delay(1000);  break;
+      case 43: wtv020sd16p.playVoice(67); delay(1000);  break;
+      case 44: wtv020sd16p.playVoice(68); delay(1000);  break;
+      case 45: wtv020sd16p.playVoice(69); delay(1000);  break;
+      case 46: wtv020sd16p.playVoice(70); delay(1000);  break;
+      case 47: wtv020sd16p.playVoice(71); delay(1000);  break;
+      case 48: wtv020sd16p.playVoice(72); delay(1000);  break;
+      case 49: wtv020sd16p.playVoice(73); delay(1000);  break;
+      case 50: wtv020sd16p.playVoice(74); delay(1000);  break;
+      case 51: wtv020sd16p.playVoice(75); delay(1000);  break;
+      case 52: wtv020sd16p.playVoice(76); delay(1000);  break;
+      case 53: wtv020sd16p.playVoice(77); delay(1000);  break;
+      case 54: wtv020sd16p.playVoice(78); delay(1000);  break;
+      case 55: wtv020sd16p.playVoice(79); delay(1000);  break;
+      case 56: wtv020sd16p.playVoice(80); delay(1000);  break;
+      case 57: wtv020sd16p.playVoice(81); delay(1000);  break;
+      case 58: wtv020sd16p.playVoice(82); delay(1000);  break;
+      case 59: wtv020sd16p.playVoice(83); delay(1000);  break;
+      case 60: wtv020sd16p.playVoice(84); delay(1000);  break;
 
-
-if (hourly != true) {
-  switch (Minute) {
-    case 0: wtv020sd16p.playVoice(24); delay(1000);    break;
-    case 1: wtv020sd16p.playVoice(25); delay(1000);    break;
-    case 2: wtv020sd16p.playVoice(26); delay(1000);    break;
-    case 3: wtv020sd16p.playVoice(27); delay(1000);    break;
-    case 4: wtv020sd16p.playVoice(28); delay(1000);    break;
-    case 5: wtv020sd16p.playVoice(29); delay(1000);    break;
-    case 6: wtv020sd16p.playVoice(30); delay(1000);    break;
-    case 7: wtv020sd16p.playVoice(31); delay(1000);    break;
-    case 8: wtv020sd16p.playVoice(32); delay(1000);    break;
-    case 9: wtv020sd16p.playVoice(33); delay(1000);    break;
-    case 10: wtv020sd16p.playVoice(34); delay(1000);  break;
-    case 11: wtv020sd16p.playVoice(35); delay(1000);  break;
-    case 12: wtv020sd16p.playVoice(36); delay(1000);  break;
-    case 13: wtv020sd16p.playVoice(37); delay(1000);  break;
-    case 14: wtv020sd16p.playVoice(38); delay(1000);  break;
-    case 15: wtv020sd16p.playVoice(39); delay(1000);  break;
-    case 16: wtv020sd16p.playVoice(40); delay(1000);  break;
-    case 17: wtv020sd16p.playVoice(41); delay(1000);  break;
-    case 18: wtv020sd16p.playVoice(42); delay(1000);  break;
-    case 19: wtv020sd16p.playVoice(43); delay(1000);  break;
-    case 20: wtv020sd16p.playVoice(44); delay(1000);  break;
-    case 21: wtv020sd16p.playVoice(45); delay(1000);  break;
-    case 22: wtv020sd16p.playVoice(46); delay(1000);  break;
-    case 23: wtv020sd16p.playVoice(47); delay(1000);  break;
-    case 24: wtv020sd16p.playVoice(48); delay(1000);    break;
-    case 25: wtv020sd16p.playVoice(49); delay(1000);    break;
-    case 26: wtv020sd16p.playVoice(50); delay(1000);    break;
-    case 27: wtv020sd16p.playVoice(51); delay(1000);    break;
-    case 28: wtv020sd16p.playVoice(52); delay(1000);    break;
-    case 29: wtv020sd16p.playVoice(53); delay(1000);    break;
-    case 30: wtv020sd16p.playVoice(54); delay(1000);    break;
-    case 31: wtv020sd16p.playVoice(55); delay(1000);    break;
-    case 32: wtv020sd16p.playVoice(56); delay(1000);    break;
-    case 33: wtv020sd16p.playVoice(57); delay(1000);    break;
-    case 34: wtv020sd16p.playVoice(58); delay(1000);  break;
-    case 35: wtv020sd16p.playVoice(59); delay(1000);  break;
-    case 36: wtv020sd16p.playVoice(60); delay(1000);  break;
-    case 37: wtv020sd16p.playVoice(61); delay(1000);  break;
-    case 38: wtv020sd16p.playVoice(62); delay(1000);  break;
-    case 39: wtv020sd16p.playVoice(63); delay(1000);  break;
-    case 40: wtv020sd16p.playVoice(64); delay(1000);  break;
-    case 41: wtv020sd16p.playVoice(65); delay(1000);  break;
-    case 42: wtv020sd16p.playVoice(66); delay(1000);  break;
-    case 43: wtv020sd16p.playVoice(67); delay(1000);  break;
-    case 44: wtv020sd16p.playVoice(68); delay(1000);  break;
-    case 45: wtv020sd16p.playVoice(69); delay(1000);  break;
-    case 46: wtv020sd16p.playVoice(70); delay(1000);  break;
-    case 47: wtv020sd16p.playVoice(71); delay(1000);  break;
-    case 48: wtv020sd16p.playVoice(72); delay(1000);  break;
-    case 49: wtv020sd16p.playVoice(73); delay(1000);  break;
-    case 50: wtv020sd16p.playVoice(74); delay(1000);  break;
-    case 51: wtv020sd16p.playVoice(75); delay(1000);  break;
-    case 52: wtv020sd16p.playVoice(76); delay(1000);  break;
-    case 53: wtv020sd16p.playVoice(77); delay(1000);  break;
-    case 54: wtv020sd16p.playVoice(78); delay(1000);  break;
-    case 55: wtv020sd16p.playVoice(79); delay(1000);  break;
-    case 56: wtv020sd16p.playVoice(80); delay(1000);  break;
-    case 57: wtv020sd16p.playVoice(81); delay(1000);  break;
-    case 58: wtv020sd16p.playVoice(82); delay(1000);  break;
-    case 59: wtv020sd16p.playVoice(83); delay(1000);  break;
-    case 60: wtv020sd16p.playVoice(84); delay(1000);  break;
-
-    default:
-      Serial.println("Erorr check files");
+      default:
+        Serial.println("Erorr check files");
     }
 
-}
+  }
 
-delay(5000);
+  delay(5000);
 
 }
 
 void hourly(DateTime &myTime) {
-  //7 o'clock
+  // 7 o'clock
   if (myTime.hour() == 7 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     delay(500);
     switchTime(myTime, true);
     delay(1000);
   }
-  //8 o'clock
+  // 8 o'clock
   else if (myTime.hour() == 8 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000); // the birds begin to sing
     switchTime(myTime, true); delay(1000); // tells what time it is
@@ -164,91 +163,91 @@ void hourly(DateTime &myTime) {
 
     delay(1000);
   }
-  //9 o'clock
+  // 9 o'clock
   else if (myTime.hour() == 9 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //10 o'clock
+  // 10 o'clock
   else if (myTime.hour() == 10 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //11 o'clock
+  // 11 o'clock
   else if (myTime.hour() == 11 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //12 o'clock
+  // 12 o'clock
   else if (myTime.hour() == 12 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //13 p.m.
+  // 13 p.m.
   else if (myTime.hour() == 13 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //14 p.m.
+  // 14 p.m.
   else if (myTime.hour() == 14 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //15 p.m.
+  // 15 p.m.
   else if (myTime.hour() == 15 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //16 p.m.
+  // 16 p.m.
   else if (myTime.hour() == 16 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //17 p.m.
+  // 17 p.m.
   else if (myTime.hour() == 17 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //18 p.m.
+  // 18 p.m.
   else if (myTime.hour() == 18 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //19 p.m.
+  // 19 p.m.
   else if (myTime.hour() == 19 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //20 p.m.
+  // 20 p.m.
   else if (myTime.hour() == 20 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //21 p.m.
+  // 21 p.m.
   else if (myTime.hour() == 21 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //22 p.m.
+  // 22 p.m.
   else if (myTime.hour() == 22 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
     delay(1000);
   }
-  //23 p.m.
+  // 23 p.m.
   else if (myTime.hour() == 23 && myTime.minute() == 00 && myTime.second() == 00) {
     wtv020sd16p.playVoice(86); delay(16000);
     switchTime(myTime, true);
@@ -287,18 +286,20 @@ bool IRvalues() {
     default:
       return false;
 
-  }// End Case
+  } // End Case
 
 
 }
 
 void setup() {
-  // put your setup code here, to run once:
+  // Put your setup code here, to run once:
   Serial.begin(9600);
 
 
   irrecv.enableIRIn(); // Start the receiver
 
+  // This code will get state of DST variable from EEPROM memory
+  // If there is nothing ine memory we will put 1 aka summer time
   DST = EEPROM.get(0, DST);
 
   if (DST != 0 && DST != 1)
@@ -308,36 +309,34 @@ void setup() {
   }
 
   // RTC clock
+  // We will loop until RTC module start
   if (! rtc.begin()) {
     Serial.println("Couldn't find RTC");
     while (1);
   }
 
+  // This condition will check if our RTC module has lost power
   if (rtc.lostPower()) {
     Serial.println("RTC lost power, lets set the time!");
 
-    // Comment out below lines once you set the date & time.
     // Following line sets the RTC to the date & time this sketch was compiled
     rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
-
-    // Following line sets the RTC with an explicit date & time
-    // for example to set January 27 2017 at 12:56 you would call:
-    // rtc.adjust(DateTime(2017, 1, 27, 12, 56, 0));
   }
+  // Comment out below lines once you set the date & time.
+  // Following line sets the RTC with an explicit date & time
+  // for example to set January 27 2017 at 12:56 you would call:
+  // rtc.adjust(DateTime(2017, 1, 27, 12, 56, 0));
 
-
-
-  //Initializes the module.
+  // Initializes the sound module.
   wtv020sd16p.reset();
 
-
+  // Setting up our DST button
   pinMode(DST_PIN, INPUT_PULLUP);
 }
 
 void loop() {
-  // check if DST button is pressed
-
-
+  // Check if DST button is pressed
+  
   if (digitalRead(DST_PIN) == LOW) {
     DateTime now = rtc.now();
     if (DST == 0) {
@@ -351,15 +350,13 @@ void loop() {
     }
   }
 
-  // initialize time object
+  // Initialize time object
   DateTime  myTime = rtc.now();
-
-
-
-  // run hourly clock notifications
+  
+  // Run hourly clock notifications
   hourly(myTime);
 
-  // run clock notification when remote controller button is pressed
+  // Run clock notification when remote controller button is pressed
   if (irrecv.decode(&results)) // have we received an IR signal?
   {
     if (IRvalues()) {
