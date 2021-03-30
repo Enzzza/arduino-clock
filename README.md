@@ -1,17 +1,15 @@
-## _Using Arduino to help my grandma_
+## _Building an Arduino clock for visually impaired_
 
 <br/>
 <br/>
  
 A few years ago I visited my grandma who at the time lived by herself in Vajxo, Sweden. Her vision was slowly deteriorating and she would always ask us to tell her what time it was. I know there is a lot of talking clocks out there but mostly they are in English. Seven days before my trip to Sweden I decided to create an Arduino clock that would produce audio notifications for each hour. For this, I recorded my mother’s ( i think this was hardest part :P ) voice along with a greeting message in Bosnian that would play every morning at 8am. Needless to say, grandma was thrilled and happy that she no longer had to rely on her family and visitors to tell her what time it was. This gave her some much needed independence.
-Funny story i needed to bring this to bus.
 
-This clock will say time every hour or if u use remote controller you will get time at that point
+The clock produces audio notifications for every hour, or on demand using the remote control.
 
-Down bellow i will make tutorial maybe it will be useful to someone.
+Down below is the tutorial - hope you find it useful.
 
-I bought parts from local shop.
-We will need following parts:
+I bought parts from a local shop. You’ll need the following:
 
 - Arduino UNO
 - DS3231 real time clock module
@@ -133,6 +131,8 @@ Add AD4 files to SD card.
 <br>
 
 ### _Time for coding :heart_eyes:_
+
+<br>
 
 Add all lib in rar format to our ArduinoIDE than include that libs
 
@@ -348,7 +348,7 @@ In this function we will use multiple if else statements, to play audio we use t
 wtv020sd16p.playVoice(86); delay(16000);
 ```
 
-Notice to play sound we use numbers and this numbers correspond to files on SD card. Number _86_ is _0086.ad4_ file on SD card. In my case ad4 file with number _86_ will play sound relaxing sound of birds. This audi will play before every audio of hours. In this function we also called function _switchTime_, this function will accept current time and boolean value that. If boolean value is _true_ we will play just correct time without minutes if this value is _false_ we will play exact time in hours and minutes.
+Notice to play sound we use numbers and this numbers correspond to files on SD card. Number _86_ is _0086.ad4_ file on SD card. In my case ad4 file with number _86_ will play sound relaxing sound of birds. This audio will play before every audio of hours. In this function we also called function _switchTime_, this function will accept current time and boolean value. If boolean value is _true_ we will play just correct time without minutes if this value is _false_ we will play exact time in hours and minutes.
 When this function is called from within _hourly_ function we will send _true_.
 
 ```C
