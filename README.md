@@ -3,7 +3,7 @@
 <br/>
 <br/>
  
-A few years ago, I visited my grandma who at the time lived by herself in Vajxo, Sweden. Her vision was slowly deteriorating and she would always ask us to tell her what time it was. There are a lot of talking clocks out there, but they are all mostly in English. Seven days before my trip to Sweden, I decided to create an Arduino clock that would produce audio notifications for each hour. For this, I recorded my mother’s voice (this was hardest part! 😛) for each hour and minute along with a greeting message in Bosnian that would play every morning at 8am. Needless to say, grandma was thrilled and happy that she no longer had to rely on her family and visitors to tell her what time it was. This gave her some much-needed independence.
+A few years ago, I visited my grandma who at the time lived by herself in Vajxo, Sweden. Her vision was slowly deteriorating and she would always ask us to tell her what time it was. There are a lot of talking clocks out there, but they are all mostly in English. Seven days before my trip to Sweden, I decided to create an Arduino clock that would produce audio notifications for each hour. For this, I recorded my mother’s voice (This was the hardest part! 😛) for each hour and minute along with a greeting message in Bosnian that would play every morning at 8am. Needless to say, grandma was thrilled and happy that she no longer had to rely on her family and visitors to tell her what time it was. This gave her some much-needed independence.
 
 The clock produces audio notifications for every hour, or on demand using the remote control.
 
@@ -25,7 +25,7 @@ I bought all the parts from a local shop. You’ll need the following:
 
 <br>
 
-### _First step is to make prototype, we don't want to test it after we solder everything._
+### _The first step is to make a prototype, we don't want to test it after we solder everything._
 
 <br>
 
