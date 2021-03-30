@@ -33,9 +33,9 @@ I bought all the parts from a local shop. You’ll need the following:
 
 <br>
 
-{% youtube xsVEGVSmkcQ %}
 
-{% youtube vn5ivbb1BCE %}
+
+
 
 <br>
 
@@ -53,7 +53,7 @@ I called my good friend to help me with soldering. He is really good with it - I
 
 ![img04](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img04.jpg)
 
-{% youtube EomNWaz-PTw %}
+
 
 <br>
 
@@ -441,10 +441,9 @@ bool IRvalues() {
 }
 ```
 
-{% youtube GiLrG6B72Eo %}
 
 I hope you’ll find this useful and make your visually impaired friends & family happy. The Arduino clock definitely helped my grandma. 
 
-{% youtube Rl6sFvUqOLI %}
 
 
+If you want to see clock in action check my [dev.to](https://dev.to/enzzza/arduino-clock-for-visually-impaired-p5) article.
