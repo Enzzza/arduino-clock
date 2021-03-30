@@ -23,7 +23,7 @@ We will need following parts:
 
 <br>
 
-![img01](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img01.PNG?token=AKSHPCZ5ZSV73CWGOHZUAT3AMJLC4)
+![img01](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img01.PNG)
 
 <br>
 
@@ -31,7 +31,7 @@ We will need following parts:
 
 <br>
 
-![img02](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img02.jpg?token=AKSHPC4N7BTSXH4Q34SPQ3LAMJLFQ)
+![img02](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img02.jpg)
 
 <br>
 
@@ -45,7 +45,7 @@ After we finished prototyping and testing everything we are ready to put it all 
 
 <br>
 
-![img03](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img03.jpg?token=AKSHPC26OEJI4SNWRLB7G5LAMJLH2)
+![img03](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img03.jpg)
 
 <br>
 
@@ -53,7 +53,7 @@ I called my good friend to help me with soldering he is really good with it i ca
 
 <br>
 
-![img04](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img04.jpg?token=AKSHPC76GOYLSGG6JEUNWX3AMJLKC)
+![img04](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img04.jpg)
 
 {% youtube EomNWaz-PTw %}
 
@@ -63,11 +63,11 @@ We make our box fancy
 
 <br>
 
-![img05](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img05.jpg?token=AKSHPC2WDMY35XF2IKMAD5LAMJLL2)
+![img05](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img05.jpg)
 
 <br>
 
-![img06](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img06.jpg?token=AKSHPCZU6Y4W7J5UEGE37FLAMJLNK)
+![img06](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img06.jpg)
 
 <br>
 
@@ -80,7 +80,7 @@ I used android application to record audio and edit it.
 <br>
 <br>
 
-![img07](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img07.jpg?token=AKSHPCYQG4XVSFFIS5PS35TAMJLP6)
+![img07](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img07.jpg)
 
 <br>
 
@@ -88,7 +88,7 @@ Record all audio for hours and minutes and name them in this format '0000.wav' '
 
 <br>
 
-![img08](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img08.jpg?token=AKSHPCZL23BODT7DK3ECFGLAMJLS4)
+![img08](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img08.jpg)
 
 <br>
 
@@ -100,7 +100,7 @@ Before everything its good to format SD card
 
 <br>
 
-![img09](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img09.jpg?token=AKSHPC4SORLACCNHE2LSWQ3AMJLUK)
+![img09](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img09.jpg)
 
 <br>
 
@@ -120,11 +120,11 @@ Run this script inside your folder with audio files make sure to put AD4CONVERTE
 
 <br>
 
-![img10](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img10.JPG?token=AKSHPC435BIDLPFL5FOJNYTAMJLV6)
+![img10](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img10.JPG)
 
 <br>
 
-![img11](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img11.JPG?token=AKSHPC5K4OF2KQR24WJCTZDAMJLXM)
+![img11](https://raw.githubusercontent.com/Enzzza/arduino-clock/main/media/img11.JPG)
 
 <br>
 
