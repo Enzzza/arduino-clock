@@ -3,13 +3,13 @@
 <br/>
 <br/>
  
-A few years ago I visited my grandma who at the time lived by herself in Vajxo, Sweden. Her vision was slowly deteriorating and she would always ask us to tell her what time it was. There are a lot of talking clocks out there, but they are all mostly in English. Seven days before my trip to Sweden I decided to create an Arduino clock that would produce audio notifications for each hour. For this, I recorded my mother’s voice (this was hardest part! 😛) for each hour and minute along with a greeting message in Bosnian that would play every morning at 8am. Needless to say, grandma was thrilled and happy that she no longer had to rely on her family and visitors to tell her what time it was. This gave her some much needed independence.
+A few years ago, I visited my grandma who at the time lived by herself in Vajxo, Sweden. Her vision was slowly deteriorating and she would always ask us to tell her what time it was. There are a lot of talking clocks out there, but they are all mostly in English. Seven days before my trip to Sweden, I decided to create an Arduino clock that would produce audio notifications for each hour. For this, I recorded my mother’s voice (this was hardest part! 😛) for each hour and minute along with a greeting message in Bosnian that would play every morning at 8am. Needless to say, grandma was thrilled and happy that she no longer had to rely on her family and visitors to tell her what time it was. This gave her some much-needed independence.
 
 The clock produces audio notifications for every hour, or on demand using the remote control.
 
 Down below is the tutorial - hope you find it useful.
 
-I bought parts from a local shop. You’ll need the following:
+I bought all the parts from a local shop. You’ll need the following:
 
 - Arduino UNO
 - DS3231 real time clock module
@@ -47,7 +47,7 @@ After we finished prototyping and testing everything we are ready to put it all 
 
 <br>
 
-I called my good friend (Armin Mušić) to help me with soldering he is really good with it i can't risk to leave joints loose
+I called my good friend to help me with soldering. He is really good with it - I can't risk to leave joints loose.
 
 <br>
 
@@ -57,7 +57,7 @@ I called my good friend (Armin Mušić) to help me with soldering he is really g
 
 <br>
 
-We make our box fancy
+Now, we make our box look a bit fancier.
 
 <br>
 
@@ -72,8 +72,8 @@ We make our box fancy
 ### _Next we will record audio for our clock_
 
 <br>
-This part was very annoying for my mom because I made her repeat all those numbers :rofl:
-I used android application to record audio and edit it.
+This part was very annoying for my mom - I made her repeat all those numbers :rofl:
+I used an android app to record and edit the audio.
 
 <br>
 <br>
@@ -82,7 +82,7 @@ I used android application to record audio and edit it.
 
 <br>
 
-Record all audio for hours and minutes and name them in this format '0000.wav' '0001.wav' this will be important later when we will use sound module to play this files
+Record audio for hours and minutes and name the files in this format '0000.wav' '0001.wav'. This will be important later when we use the sound module to play the audio files.
 
 <br>
 
@@ -94,7 +94,7 @@ Record all audio for hours and minutes and name them in this format '0000.wav' '
 
 <br>
 
-Before everything its good to format SD card
+Before continuing, remember to format the SD card.
 
 <br>
 
@@ -102,8 +102,8 @@ Before everything its good to format SD card
 
 <br>
 
-After we formated card we need to add audio files to the SD card. Our sound module accepts ad4 file format so we need to convert our files to that format using [AD4CONVERTER](https://www.buildcircuit.com/how-to-convert-mp3-and-wav-files-to-ad4-format-wtv020sd-tutorial/).
-To make it easier for us i made powershell [script](github) that will automaticly convert all files in folder to AD4 format.
+We will now add all the files to the SD card. Our sound module accepts ad4 file format so we need to convert our files to that format using [AD4CONVERTER](https://www.buildcircuit.com/how-to-convert-mp3-and-wav-files-to-ad4-format-wtv020sd-tutorial/).
+To make it easier, I made powershell [script](github) that will automatically convert all the files in the folder to AD4 format.
 
 ```powershell
 $fileNames = Get-ChildItem -Path "your_audio_files location" -Recurse -Include *.wav
@@ -114,7 +114,7 @@ foreach($file in $fileNames ){
 }
 ```
 
-Run this script inside your folder with audio files make sure to put AD4CONVERTER.exe in same folder.
+Run this script inside your folder with audio files - make sure to put AD4CONVERTER.exe in same folder.
 
 <br>
 
@@ -126,7 +126,7 @@ Run this script inside your folder with audio files make sure to put AD4CONVERTE
 
 <br>
 
-Add AD4 files to SD card.
+Add AD4 files to the SD card.
 
 <br>
 
@@ -134,7 +134,7 @@ Add AD4 files to SD card.
 
 <br>
 
-Add all lib in rar format to our ArduinoIDE than include that libs
+Add all the libs in rar format to our ArduinoIDE then include those libs.
 
 ```C
 #include <EEPROM.h>
@@ -143,7 +143,7 @@ Add all lib in rar format to our ArduinoIDE than include that libs
 #include "IRremote.h"
 ```
 
-Now we define all PINs we will use in our code
+Now we define all the PINs we will use in our code.
 
 ```C
 // RTC setup
@@ -158,10 +158,8 @@ RTC_DS3231 rtc;
 // IR Pin
 #define RECEIVER_PIN 11 // Signal Pin of IR receiver to Arduino Digital Pin 11
 
-
 // DST Pin
 #define DST_PIN 9
-
 
 // DST check
 int DST;
@@ -180,21 +178,20 @@ decode_results results;      // create instance of 'decode_results'
 Wtv020sd16p wtv020sd16p(RESET_PIN, CLOCK_PIN, DATA_PIN, BUSY_PIN);
 ```
 
-DST is variable in which we will keep state of button.
-Role of this button is to track if its summer time or winter time. When pressed it will advance clock by one hour and vice versa
+DST is the variable in which we will keep state of button.
+The role of this button is to track daylight savings time. When pressed it will change the time by one hour.
 
-Next we will explain what is in setup function. Setup function will run when we power on Arduino.
+Next, we will explain the setup function which will run when we power on Arduino.
 
 ```C
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
 
-
   irrecv.enableIRIn(); // Start the receiver
 
   // this code will get state of DST variable from EEPROM memory
-  // if there is nothing ine memory we will put 1 aka summer time
+  // if there is nothing ine memory we will put 1 aka summertime
   DST = EEPROM.get(0, DST);
 
   if (DST != 0 && DST != 1)
@@ -230,7 +227,7 @@ void setup() {
 }
 ```
 
-In this function we setup initial values for our modules. We will try to get DST button state from EEPROM memory if there is nothing in memory we will put 1 as default (summer time).
+In this function we’ll setup initial values for our modules. We’ll try to get DST button state from EEPROM memory. If there is nothing in the memory, we will put 1 as default (summer time).
 
 ```C
 DST = EEPROM.get(0, DST);
@@ -243,7 +240,7 @@ DST = EEPROM.get(0, DST);
 
 ```
 
-After we finished up initial setup we Arduino will run loop function that is running in some interval
+After we finished up initial setup, Arduino will run loop function that is running in some interval.
 
 ```C
 void loop() {
@@ -283,7 +280,7 @@ void loop() {
 }
 ```
 
-In loop function we are checking if DST button has been pressed. Than we check if DST state is 0 or 1 and we adjust time accordingly. We add one hour if DST state is 1.
+In the loop function we’re checking if the DST button has been pressed. Then, we check if the DST state is 0 or 1 and we adjust the time accordingly. We add one hour if the DST state is 1.
 
 ```C
 /*loop function*/
@@ -348,7 +345,7 @@ In this function we will use multiple if else statements, to play audio we use t
 wtv020sd16p.playVoice(86); delay(16000);
 ```
 
-Notice to play sound we use numbers and this numbers correspond to files on SD card. Number _86_ is _0086.ad4_ file on SD card. In my case ad4 file with number _86_ will play sound relaxing sound of birds. This audio will play before every audio of hours. In this function we also called function _switchTime_, this function will accept current time and boolean value. If boolean value is _true_ we will play just correct time without minutes if this value is _false_ we will play exact time in hours and minutes.
+Notice to play the sound we use numbers and these numbers correspond to the audio files on the SD card. Number _86_ is _0086.ad4_ file on the SD card. In my case ad4 file with number _86_ will play the sound of birds singing. This audio will play before every audio for each hour. In this function, we also called function _switchTime_ - this function will accept current time and boolean value. If boolean value is _true_ we will only play the exact hour time without minutes. If this value is _false_ we will play the exact time in hours and minutes.
 When this function is called from within _hourly_ function we will send _true_.
 
 ```C
@@ -390,7 +387,7 @@ void switchTime(DateTime &myTime, bool hourly) {
 }
 ```
 
-Back to the loop function, now we will react if we recive IR signal from remote and if we get signal from remote we will play current time with hours and minutes using same function _switchTime_ now we will send _false_ as second parametar
+Back to the loop function, now we will react if we recive IR signal from the remote and if we get a signal from the remote, we’ll play current time with hours and minutes using the same function _switchTime_; now we will send _false_ as the second parameter.
 
 ```C
   /*loop function*/
@@ -407,7 +404,7 @@ Back to the loop function, now we will react if we recive IR signal from remote 
   }
 ```
 
-In this if block we will check if we recive signal and also to ignore other remote controlers e.g. TV remote controller we will check if signal is in the allowed _IRvalues_
+In this, if block we’ll check if we receive a signal and to ignore other remote controlers e.g. TV remote controller we’ll check if the signal is in the allowed _IRvalues_
 
 ```C
 bool IRvalues() {
@@ -446,6 +443,8 @@ bool IRvalues() {
 
 {% youtube GiLrG6B72Eo %}
 
-I hope someone will make use of this and make their loved ones happy. My grandma will have easier time to know what time it is....
+I hope you’ll find this useful and make your visually impaired friends & family happy. The Arduino clock definitely helped my grandma. 
 
 {% youtube Rl6sFvUqOLI %}
+
+
