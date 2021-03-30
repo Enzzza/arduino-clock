@@ -72,7 +72,7 @@ We make our box fancy
 ### _Next we will record audio for our clock_
 
 <br>
-This part was very annoying for my mom because i made her repeat all those numbers :rofl:
+This part was very annoying for my mom because I made her repeat all those numbers :rofl:
 I used android application to record audio and edit it.
 
 <br>
