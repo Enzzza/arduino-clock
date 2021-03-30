@@ -1,4 +1,4 @@
-## _Building an Arduino clock for visually impaired_
+## _Building an Arduino clock for the visually impaired_
 
 <br/>
 <br/>
